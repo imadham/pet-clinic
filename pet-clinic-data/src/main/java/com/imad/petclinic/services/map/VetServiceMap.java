@@ -1,11 +1,11 @@
 package com.imad.petclinic.services.map;
 
 import com.imad.petclinic.model.Vet;
-import com.imad.petclinic.services.CrudService;
+import com.imad.petclinic.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
         return super.findAll();
