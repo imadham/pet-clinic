@@ -38,14 +38,12 @@ public class DataLoader implements CommandLineRunner {
         System.out.println("Loading owners...");
 
         Vet vet1 = new Vet();
-        vet1.setId(1L);
         vet1.setFirstName("Majd");
         vet1.setLastName("Ah");
 
         vetService.save(vet1);
 
         Vet vet2 = new Vet();
-        vet2.setId(2L);
         vet2.setFirstName("Ahmad");
         vet2.setLastName("mh");
 
