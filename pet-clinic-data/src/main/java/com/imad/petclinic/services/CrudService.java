@@ -6,11 +6,11 @@ public interface CrudService<T, Id> {
 
     Set<T> findAll();
 
-    T findById(Long id);
+    T findById(Id id);
 
     T save(T object);
 
     void delete(T object);
 
-    void deleteById(Long id);
+    void deleteById(Id id);
 }
