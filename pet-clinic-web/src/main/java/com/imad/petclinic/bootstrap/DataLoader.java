@@ -1,10 +1,7 @@
 package com.imad.petclinic.bootstrap;
 
 import com.imad.petclinic.model.*;
-import com.imad.petclinic.services.OwnerService;
-import com.imad.petclinic.services.PetTypeService;
-import com.imad.petclinic.services.SpecialtyService;
-import com.imad.petclinic.services.VetService;
+import com.imad.petclinic.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -17,12 +14,15 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialtyService specialtyService;
+    private final VisitService visitService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtyService specialtyService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService,
+                      SpecialtyService specialtyService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialtyService = specialtyService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -90,6 +90,12 @@ public class DataLoader implements CommandLineRunner {
         owner2.getPets().add(aliPet);
 
         ownerService.save(owner2);
+
+        Visit dogVisit = new Visit();
+        dogVisit.setPet(aliPet);
+        dogVisit.setDate(LocalDate.now());
+        dogVisit.setDescription("ill dog");
+        visitService.save(dogVisit);
 
         System.out.println("Loading owners...");
 
