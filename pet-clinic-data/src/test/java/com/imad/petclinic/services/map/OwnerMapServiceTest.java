@@ -69,7 +69,7 @@ class OwnerMapServiceTest {
 
         Owner imad = ownerMapService.findByLastName(lastName);
 
-        assertNull(imad);
+        assertNotNull(imad);
 
         assertEquals(ownerId,imad.getId());
     }
