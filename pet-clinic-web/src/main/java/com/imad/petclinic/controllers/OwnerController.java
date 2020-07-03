@@ -36,14 +36,26 @@ public class OwnerController {
     public String findOwners(Model model){
 
         model.addAttribute("owner",Owner.builder().build());
+
+        /*
+        هون عملت اوبجيكت جديد
+        بالصفحة find owners
+        اشارة الدولار قبل الاونر حتى نوصل لاوبجيكت
+        حتى اوصل للاتريبيوت بالاوبجيكت بستخدم اشارة النجمة
+        * */
+
         return "owners/findOwners";
     }
+
 
     @GetMapping()
     public String processFindForm(Owner owner, BindingResult result, Model model){
         if(owner.getLastName() == null)owner.setLastName("");
 
-        List<Owner> results = ownerService.findAllByLastNameLike(owner.getLastName());
+        List<Owner> results = ownerService.findAllByLastNameLike("%" + owner.getLastName() + "%");
+
+        //if(owner.equals(model.getAttribute("owner"))) System.out.println("imad");
+        //owner is equal to attribute owner (spring magic)
 
         if(results.isEmpty()){
             result.rejectValue("lastName","notFound","not found");
