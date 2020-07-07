@@ -17,10 +17,15 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.Collection;
 
+/**
+ * Created by jt on 9/22/18.
+ */
 @Controller
-@RequestMapping("owners/{ownerId}")
+@RequestMapping("/owners/{ownerId}")
 public class PetController {
-    public final String VIEWS_PETS_CREATE_OR_UPDATE_FORM = "pets/createOrUpdatePetForm";
+
+    private static final String VIEWS_PETS_CREATE_OR_UPDATE_FORM = "pets/createOrUpdatePetForm";
+
     private final PetService petService;
     private final OwnerService ownerService;
     private final PetTypeService petTypeService;
@@ -32,19 +37,17 @@ public class PetController {
     }
 
     @ModelAttribute("types")
-    public Collection<PetType> populatePetTypes(){
+    public Collection<PetType> populatePetTypes() {
         return petTypeService.findAll();
     }
 
-
     @ModelAttribute("owner")
-    public Owner findOwner(@PathVariable("ownerId") Long ownerId){
+    public Owner findOwner(@PathVariable("ownerId") Long ownerId) {
         return ownerService.findById(ownerId);
     }
 
-
     @InitBinder("owner")
-    public void initOwnerBinder(WebDataBinder dataBinder){
+    public void initOwnerBinder(WebDataBinder dataBinder) {
         dataBinder.setDisallowedFields("id");
     }
 
@@ -91,6 +94,5 @@ public class PetController {
             return "redirect:/owners/" + owner.getId();
         }
     }
-
 
 }
