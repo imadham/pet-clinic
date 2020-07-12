@@ -1,6 +1,9 @@
 package com.imad.petclinic.services.map;
 
-import com.imad.petclinic.model.Owner;
+import com.imad.petclinicdata.model.Owner;
+import com.imad.petclinicdata.services.map.OwnerMapService;
+import com.imad.petclinicdata.services.map.PetMapService;
+import com.imad.petclinicdata.services.map.PetTypeMapService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

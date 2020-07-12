@@ -1,7 +1,8 @@
 package com.imad.petclinic.bootstrap;
 
-import com.imad.petclinic.model.*;
-import com.imad.petclinic.services.*;
+import com.imad.petclinicdata.model.*;
+import com.imad.petclinicdata.repositories.PetTypeRepository;
+import com.imad.petclinicdata.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -15,14 +16,16 @@ public class DataLoader implements CommandLineRunner {
     private final PetTypeService petTypeService;
     private final SpecialtyService specialtyService;
     private final VisitService visitService;
+    private final PetTypeRepository petTypeRepository;
 
     public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService,
-                      SpecialtyService specialtyService, VisitService visitService) {
+                      SpecialtyService specialtyService, VisitService visitService, PetTypeRepository petTypeRepository) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialtyService = specialtyService;
         this.visitService = visitService;
+        this.petTypeRepository = petTypeRepository;
     }
 
     @Override
@@ -39,6 +42,7 @@ public class DataLoader implements CommandLineRunner {
         PetType dog = new PetType();
         dog.setName("Dog");
         PetType savedPetDogType = petTypeService.save(dog);
+        //petTypeRepository.save(dog);
 
         PetType cat = new PetType();
         cat.setName("Cat");

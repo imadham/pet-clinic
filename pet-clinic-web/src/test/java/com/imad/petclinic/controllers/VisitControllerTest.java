@@ -1,10 +1,10 @@
 package com.imad.petclinic.controllers;
 
-import com.imad.petclinic.model.Owner;
-import com.imad.petclinic.model.Pet;
-import com.imad.petclinic.model.PetType;
-import com.imad.petclinic.services.PetService;
-import com.imad.petclinic.services.VisitService;
+import com.imad.petclinicdata.model.Owner;
+import com.imad.petclinicdata.model.Pet;
+import com.imad.petclinicdata.model.PetType;
+import com.imad.petclinicdata.services.PetService;
+import com.imad.petclinicdata.services.VisitService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

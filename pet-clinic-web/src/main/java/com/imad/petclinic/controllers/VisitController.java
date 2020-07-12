@@ -1,9 +1,9 @@
 package com.imad.petclinic.controllers;
 
-import com.imad.petclinic.model.Pet;
-import com.imad.petclinic.model.Visit;
-import com.imad.petclinic.services.PetService;
-import com.imad.petclinic.services.VisitService;
+import com.imad.petclinicdata.model.Pet;
+import com.imad.petclinicdata.model.Visit;
+import com.imad.petclinicdata.services.PetService;
+import com.imad.petclinicdata.services.VisitService;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;

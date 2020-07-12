@@ -1,11 +1,11 @@
 package com.imad.petclinic.controllers;
 
-import com.imad.petclinic.model.Owner;
-import com.imad.petclinic.model.Pet;
-import com.imad.petclinic.model.PetType;
-import com.imad.petclinic.services.OwnerService;
-import com.imad.petclinic.services.PetService;
-import com.imad.petclinic.services.PetTypeService;
+import com.imad.petclinicdata.model.Owner;
+import com.imad.petclinicdata.model.Pet;
+import com.imad.petclinicdata.model.PetType;
+import com.imad.petclinicdata.services.OwnerService;
+import com.imad.petclinicdata.services.PetService;
+import com.imad.petclinicdata.services.PetTypeService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;

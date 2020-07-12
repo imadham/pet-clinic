@@ -1,9 +1,10 @@
 package com.imad.petclinic.services.springdatajpa;
 
-import com.imad.petclinic.model.Owner;
-import com.imad.petclinic.repositories.OwnerRepository;
-import com.imad.petclinic.repositories.PetRepository;
-import com.imad.petclinic.repositories.PetTypeRepository;
+import com.imad.petclinicdata.model.Owner;
+import com.imad.petclinicdata.repositories.OwnerRepository;
+import com.imad.petclinicdata.repositories.PetRepository;
+import com.imad.petclinicdata.repositories.PetTypeRepository;
+import com.imad.petclinicdata.services.springdatajpa.OwnerSDJpaService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

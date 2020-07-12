@@ -1,7 +1,7 @@
 package com.imad.petclinic.controllers;
 
-import com.imad.petclinic.model.Vet;
-import com.imad.petclinic.services.VetService;
+import com.imad.petclinicdata.model.Vet;
+import com.imad.petclinicdata.services.VetService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

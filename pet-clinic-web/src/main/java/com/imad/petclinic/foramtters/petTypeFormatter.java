@@ -1,7 +1,7 @@
 package com.imad.petclinic.foramtters;
 
-import com.imad.petclinic.model.PetType;
-import com.imad.petclinic.services.PetTypeService;
+import com.imad.petclinicdata.model.PetType;
+import com.imad.petclinicdata.services.PetTypeService;
 import org.springframework.format.Formatter;
 import org.springframework.stereotype.Component;
 
