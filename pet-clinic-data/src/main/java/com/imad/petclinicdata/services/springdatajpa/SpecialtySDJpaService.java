@@ -30,9 +30,7 @@ public class SpecialtySDJpaService implements SpecialtyService {
     }
 
     @Override
-    public Specialty save(Specialty object)
-    {
-        System.out.println("speciality saving");
+    public Specialty save(Specialty object) {
         return specialtyRepository.save(object);
     }
 
